@@ -17,11 +17,23 @@
 
 <h3>Ensimmäinen luku</h3>
 
-<p><strong>Seitsemän veljestä</strong> on <strong>Aleksis Kiven</strong> kirjoittama romaani, 
+<p id="waveText2"><strong>Seitsemän veljestä</strong> on <strong>Aleksis Kiven</strong> kirjoittama romaani, 
   jota pidetään yhtenä suomalaisen kirjallisuuden suurimmista merkkiteoksista. 
   Seitsemän veljestä ilmestyi keväällä <strong>1870</strong> Suomalaisen Kirjallisuuden Seuran Novellikirjasto-sarjassa 
   neljän vihon painoksena. Romaanijulkaisu ilmestyi vasta vuonna 1873.[1] 
   Teosta pidetään suomalaisen kirjallisuuden ja realistisen kansankuvauksen tienraivaajana.</p>
+
+<p>Tärkeät päähenkilöt</p>
+<ul>
+  <li>Päähenkilöt
+  <ul>
+    <li>Juhani</li>
+    <li>Juhani</li>
+    <li>Juhani</li>
+  </li>
+  </ul>
+</ul>
+
 
 <em>jatkuu...</em>
 
@@ -61,8 +73,8 @@
 
     draw();
 
-document.addEventListener('DOMContentLoaded', function() {
-    const text = document.getElementById('waveText');
+    document.addEventListener('DOMContentLoaded', function() {
+    const text = document.getElementById('waveText2');
     const textContent = text.innerText;
     text.innerHTML = '';
 
@@ -74,18 +86,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let spans = text.getElementsByTagName('span');
-    let colorIndex = 0;
+    let waveIndex = 0;
 
-    function updateColor() {
+    function updateWave() {
         for (let i = 0; i < spans.length; i++) {
             // Apply a color based on the current index
-            spans[i].style.color = `hsl(${colorIndex + i * 5}, 100%, 50%)`;
+            spans[i].style.color = `hsl(${waveIndex + i * 20}, 100%, 50%)`;
+
+            // Move characters up and down
+            spans[i].style.position = 'relative';
+            spans[i].style.top = `${Math.sin(waveIndex / 10 + i / 2) * 10}px`;
         }
-        colorIndex++;
-        requestAnimationFrame(updateColor);
+        waveIndex++;
+        requestAnimationFrame(updateWave);
     }
 
-    updateColor();
+    updateWave();
 });
 </script>
 
