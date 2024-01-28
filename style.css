@@ -1,6 +1,29 @@
-p { color: red; }
+p { color: rgb(138, 138, 235); }
 li { color: rgb(233, 145, 145); }
 em { color: rgb(194, 26, 144); }
-h3 { color: red; }
+h3 { color: rgb(239, 36, 168); }
 h1 { color: rgb(239, 36, 168); }
-a { color: rgb(236, 79, 79); }
+a { color: rgb(164, 102, 189); }
+
+.first-box-container {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    position: fixed 
+  }
+
+  .second-box-container {
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    left: 250px;
+    position: fixed
+  }
+  
+  .third-box-container {
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    left: 500px;
+    position: fixed
+  }
