@@ -4,6 +4,13 @@ em { color: rgb(194, 26, 144); }
 h3 { color: rgb(239, 36, 168); }
 h1 { color: rgb(239, 36, 168); }
 a { color: rgb(164, 102, 189); }
+body {
+    margin: 0 auto;
+    max-width: 50em;
+  }
+  body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+  }
 
 .first-box-container {
     width: 120px;
