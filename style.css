@@ -6,24 +6,46 @@ h1 { color: rgb(239, 36, 168); }
 a { color: rgb(164, 102, 189); }
 
 .first-box-container {
-    width: 200px;
+    width: 120px;
     height: 100px;
     background-color: red;
-    position: fixed 
+    border-style: solid;
+    border-color: rgb(33, 238, 10);
+    text-align: center;
+    position: fixed
   }
 
   .second-box-container {
-    width: 200px;
+    width: 120px;
     height: 100px;
     background-color: yellow;
+    border-style: solid;
+    border-color: rgb(238, 10, 230);
     left: 250px;
+    text-align: center;
     position: fixed
   }
   
   .third-box-container {
-    width: 200px;
+    width: 120px;
     height: 100px;
     background-color: green;
+    border-style: solid;
+    border-color: rgb(238, 219, 10);
     left: 500px;
+    text-align: center;
     position: fixed
   }
+
+
+.first-box-container .box-text::before {
+    content: 'Ensimmäinen elementti';
+}
+
+.second-box-container .box-text::before {
+    content: 'Toinen elementti';
+}
+
+.third-box-container .box-text::before {
+    content: 'Kolmas elementti';
+}
